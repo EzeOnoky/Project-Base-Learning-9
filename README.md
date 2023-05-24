@@ -84,4 +84,4 @@ sudo apt-get install jenkins
   ![PJ9_5](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/c7d2881f-0955-492e-bb11-624060e51610)
   
 
-###   
+### Step 2 – Configure Jenkins to retrieve source codes from GitHub using Webhooks
