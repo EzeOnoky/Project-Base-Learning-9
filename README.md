@@ -37,6 +37,7 @@ Jenkins is one of the tools DevOps Engineers use for continuous integration, con
 #### 1. - Create an AWS EC2 server based on Ubuntu Server 20.04 LTS and name it "Jenkins"
 
 #### 2. - Install [JDK](https://en.wikipedia.org/wiki/Java_Development_Kit) (since Jenkins is a Java-based application)
+Without JAVA installation, the JENKINS will not run.
 
 ```
 sudo apt update
@@ -77,7 +78,7 @@ sudo apt-get install jenkins
 
 ![PJ9_4](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/9fcdfcc1-89f6-4b18-89cf-89d1df5a50dc)
 
-- Once plugins installation is done – create an admin user and you will get your Jenkins server address.
+- Once plugins installation is done – create an admin user and you will get your Jenkins server address. The plugin installation is helps extend the functionality of the JENKINS
 
 - The installation is completed!
 
