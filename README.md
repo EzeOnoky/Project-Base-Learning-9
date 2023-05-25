@@ -64,13 +64,13 @@ sudo apt-get install jenkins
 
 #### 5. - Perform initial Jenkins setup.
 
-- From your browser access **http://<Jenkins-Server-Public-IP-Address-or-Public-DNS-Name>:8080**
+- From my browser, i accessed **http://<Jenkins-Server-Public-IP-Address-or-Public-DNS-Name>:8080**
 
-- You will be prompted to provide a default admin password
+- I was prompted to provide a default admin password
   
  ![PJ9_3](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/4e063d69-01f9-425d-8471-0194c1a6f607)
   
-- Retrieve it from your server:
+- I Retrieved the password from my Ubuntu server:
 
 `sudo cat /var/lib/jenkins/secrets/initialAdminPassword`
 
@@ -78,8 +78,14 @@ sudo apt-get install jenkins
 
 ![PJ9_4](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/9fcdfcc1-89f6-4b18-89cf-89d1df5a50dc)
 
+    
 - Once plugins installation is done – create an admin user and you will get your Jenkins server address. The plugin installation is helps extend the functionality of the JENKINS
 
+![PJ9_4A](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/af26eabc-6512-49e8-89c6-9fba1705e2ef)
+
+NB - This part of creating a user can be skipped   
+
+    
 - The installation is completed!
 
   ![PJ9_5](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/c7d2881f-0955-492e-bb11-624060e51610)
@@ -91,5 +97,9 @@ sudo apt-get install jenkins
 
 #### 1. - Enable webhooks in your GitHub repository settings [Webhooks]
     (https://darey.io/wp-content/uploads/2021/07/webhook_github.gif)
+    
+Follow the steps from  1 - 7   
+
+![PJ9_6](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/e6d86242-11c7-4b2d-a2a7-044e79ad0662)
     
 #### 2. - Go to Jenkins web console, click "New Item" and create a "Freestyle project"       
