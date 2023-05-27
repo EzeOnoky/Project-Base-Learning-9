@@ -147,10 +147,29 @@ You have now configured an automated Jenkins job that receives files from GitHub
 By default, the artifacts are stored on Jenkins server locally
 
 `ls /var/lib/jenkins/jobs/tooling_github/builds/<build_number>/archive/`
+
+NB - tooling_github is the name of the freestyle project, build number is number of the build we want to access 
+
+So for our project 9, we will have....
+
+`ls /var/lib/jenkins/jobs/project9/builds/3/archive/`
+    
+So the view the Artifacts stored in JENKINS, follow below path...    
+    
+![PJ9_15](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/2c331089-8854-495f-8c11-526ae739b6d1)
     
 # CONFIGURE JENKINS TO COPY FILES TO NFS SERVER VIA SSH
     
 ## Step 3 – Configure Jenkins to copy files to NFS server via SSH
+    
+Now we have our artifacts saved locally on Jenkins server, the next step is to copy them to our NFS server to /mnt/apps directory.
+
+Jenkins is a highly extendable application and there are 1400+ plugins available. We will need a plugin that is called "Publish Over SSH". Install "Publish Over SSH" plugin.
+On main dashboard select "Manage Jenkins" and choose "Manage Plugins" menu item.
+
+On "Available" tab search for "Publish Over SSH" plugin and install it
+
+    
     
     
 
