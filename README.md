@@ -102,4 +102,30 @@ Follow the steps from  1 - 7
 
 ![PJ9_6](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/e6d86242-11c7-4b2d-a2a7-044e79ad0662)
     
-#### 2. - Go to Jenkins web console, click "New Item" and create a "Freestyle project"       
+#### 2. - Go to Jenkins web console, click "New Item" and create a "Freestyle project"     
+
+![PJ9_8](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/aee48333-21da-4710-b7c3-eeaf22c1ecbf)
+    
+i had to connect to GitHub repository, and copied the URL of the Tooling repo
+
+![PJ9_7](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/0749e081-85be-419a-a3c4-602809d7b502)
+    
+In configuration of my Jenkins freestyle project, I choose Git repository, I also provided there the link to the Tooling GitHub repository and credentials (user/password) so Jenkins could access files in the repository.
+    
+![PJ9_9](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/89449f1b-2a85-4362-992b-1b8e29b7c814)
+    
+The configurations were saved, then i proceeded to run the build. For now the build can only be done manually.
+Click "Build Now" button, if you have configured everything correctly, the build will be successfull and you will see it under #1 below...
+
+![PJ9_10](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/0224b2d4-db09-4e06-a44c-e2efbce50f4b)
+    
+So i proceeded to open the build and check in "Console Output" if it has run successfully. Congratulations! I was able to make my very first Jenkins build!
+
+![PJ9_11](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/5eb9273d-a3ba-4682-9bcf-9776d8c6a03e)
+   
+But this build does not produce anything and it runs only when we trigger it manually. Let us fix it.    
+
+#### 3. - I Clicked "Configure" your job/project and proceeded to add these two configurations below
+ 
+Configure triggering the job from GitHub webhook:    
+    
