@@ -127,5 +127,30 @@ But this build does not produce anything and it runs only when we trigger it man
 
 #### 3. - I Clicked "Configure" your job/project and proceeded to add these two configurations below
  
-Configure triggering the job from GitHub webhook:    
+1 - Configure triggering the job from GitHub webhook:    
+2 - Configure "Post-build Actions" to archive all the files – files resulted from a build are called "artifacts".
+
+    
+![PJ9_12](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/ec0934f9-63eb-4191-80d9-51e80d69dfea)
+    
+Now, I proceeded to make some change in any file in the GitHub repository (e.g. README.MD file) and push the changes to the master branch. I saw that a new build has been launched automatically (by webhook) and was also able to see its results – artifacts, saved on Jenkins server.  
+
+I just added one line on my git repo, and then proceeded to commit the change
+![PJ9_13](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/70426175-293a-4188-badc-f1068eb67f4f)
+    
+Now on checking JENKINS,  a 3rd build has been triggered by the push event, i proceeded to check more details on the 3rd build
+
+![PJ9_14](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/39b071bc-b582-4b5b-bddf-8abd55c75394)
+    
+You have now configured an automated Jenkins job that receives files from GitHub by webhook trigger (this method is considered as ‘push’ because the changes are being ‘pushed’ and files transfer is initiated by GitHub). There are also other methods: trigger one job (downstreadm) from another (upstream), poll GitHub periodically and others.
+
+By default, the artifacts are stored on Jenkins server locally
+
+`ls /var/lib/jenkins/jobs/tooling_github/builds/<build_number>/archive/`
+    
+
+    
+    
+
+    
     
