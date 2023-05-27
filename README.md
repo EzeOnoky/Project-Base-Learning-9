@@ -30,9 +30,9 @@ Jenkins is one of the tools DevOps Engineers use for continuous integration, con
 
 ![PJ9_1](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/989bffbc-18a0-44f7-bb4f-e1a2a295abf1)
 
-## INSTALL AND CONFIGURE JENKINS SERVER
+# INSTALL AND CONFIGURE JENKINS SERVER
 
-### Step 1** – Install Jenkins server
+## Step 1 – Install Jenkins server
 
 #### 1. - Create an AWS EC2 server based on Ubuntu Server 20.04 LTS and name it "Jenkins"
 
@@ -91,7 +91,7 @@ NB - This part of creating a user can be skipped
   ![PJ9_5](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/c7d2881f-0955-492e-bb11-624060e51610)
   
 
-### Step 2 – Configure Jenkins to retrieve source codes from GitHub using Webhooks
+## Step 2 – Configure Jenkins to retrieve source codes from GitHub using Webhooks
 
 - In this part, you will learn how to configure a simple Jenkins job/project (these two terms can be used interchangeably). This job will will be triggered by GitHub [webhooks](https://en.wikipedia.org/wiki/Webhook) and will execute a ‘build’ task to retrieve codes from GitHub and store it locally on Jenkins server.
 
@@ -148,7 +148,9 @@ By default, the artifacts are stored on Jenkins server locally
 
 `ls /var/lib/jenkins/jobs/tooling_github/builds/<build_number>/archive/`
     
-
+# CONFIGURE JENKINS TO COPY FILES TO NFS SERVER VIA SSH
+    
+## Step 3 – Configure Jenkins to copy files to NFS server via SSH
     
     
 
