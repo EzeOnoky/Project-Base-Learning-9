@@ -162,16 +162,47 @@ So the view the Artifacts stored in JENKINS, follow below path...
     
 ## Step 3 – Configure Jenkins to copy files to NFS server via SSH
     
-Now we have our artifacts saved locally on Jenkins server, the next step is to copy them to our NFS server to /mnt/apps directory.
-
-Jenkins is a highly extendable application and there are 1400+ plugins available. We will need a plugin that is called "Publish Over SSH". Install "Publish Over SSH" plugin.
-On main dashboard select "Manage Jenkins" and choose "Manage Plugins" menu item.
-
-On "Available" tab search for "Publish Over SSH" plugin and install it
-
+- Now we have our artifacts saved locally on Jenkins server, the next step is to copy them to our NFS server to ** /mnt/apps** directory.
+    
+- Jenkins is a highly extendable application and there are 1400+ plugins available. We will need a plugin that is called "[Publish Over SSH](https://plugins.jenkins.io/publish-over-ssh/)".
+    
+1. - Install "Publish Over SSH" plugin.
+    
+- On main dashboard select "Manage Jenkins" and choose "Manage Plugins" menu item.
+    
+- On "Available" tab search for "Publish Over SSH" plugin and install it.
+    
+![PJ9_16](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/70317f9d-d6b5-422c-9544-b1b70623bc23)
+    
+2. - Configure the job/project to copy artifacts over to NFS server.
+    
+- On main dashboard select "Manage Jenkins" and choose "Configure System" menu item.
+    
+- Scroll down to Publish over SSH plugin configuration section and configure it to be able to connect to your NFS server:
+    
+1. - Provide a private key (content of .pem file that you use to connect to NFS server via SSH/Putty)
+    
+2. - Arbitrary name
+    
+3. - Hostname – can be **private IP address** of your NFS server
+    
+4. - Username – **ec2-user** (since NFS server is based on EC2 with RHEL 8)
+    
+5. - Remote directory – **/mnt/apps** since our Web Servers use it as a mointing point to retrieve files from the NFS server
+    
+- Test the configuration and make sure the connection returns **Success**. Remember, that TCP port 22 on NFS server must be open to receive SSH connections.    
     
     
-    
+![PJ9_17](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/ff79f55c-43fd-44bd-82ec-cdd82d5c5d0c)
 
+    
+- Save the configuration, open your Jenkins job/project configuration page and add another one "Post-build Action"
+
+- Configure it to send all files probuced by the build into our previouslys define remote directory. In our case we want to copy all files and directories – so we use **.
+    
+- If you want to apply some particular pattern to define which files to send – use this syntax.    
+
+![PJ9_18](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/b14f62e2-ed73-439e-b499-0c80a3f08b54)
+  
     
     
