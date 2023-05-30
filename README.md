@@ -203,6 +203,25 @@ So the view the Artifacts stored in JENKINS, follow below path...
 - If you want to apply some particular pattern to define which files to send – use this syntax.    
 
 ![PJ9_18](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/b14f62e2-ed73-439e-b499-0c80a3f08b54)
+    
+- Configure it to send all files probuced by the build into our previouslys define remote directory. In our case we want to copy all files and directories – so we use **.
+    
+- If you want to apply some particular pattern to define which files to send – use this syntax.
+    
+<img width="551" alt="Send build artifact over ssh" src="https://user-images.githubusercontent.com/115954100/226905946-7a7254a5-8c1a-43a2-9493-0e88a67fe37a.png">
+   
+- Save this configuration and go ahead, change something in **README.MD** file in your GitHub Tooling repository.
+    
+- Webhook will trigger a new job and in the "Console Output" of the job you will find something like this:    
+    
+```    
+SSH: Transferred 25 file(s)
+Finished: SUCCESS   
+```    
+    
+- To make sure that the files in **/mnt/apps** have been udated – connect via SSH/Putty to your NFS server and check **README.MD** file `cat /mnt/apps/README.md`
+
+- If you see the changes you had previously made in your GitHub – the job works as expected.       
   
     
     
