@@ -69,6 +69,8 @@ sudo apt-get install jenkins
 
 - From my browser, i accessed **http://<Jenkins-Server-Public-IP-Address-or-Public-DNS-Name>:8080**
 
+http://44.201.108.157:8080  
+
 - I was prompted to provide a default admin password
   
  ![PJ9_3](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/4e063d69-01f9-425d-8471-0194c1a6f607)
@@ -90,9 +92,9 @@ NB - This part of creating a user can be skipped
 
     
 - The installation is completed!
-
-  ![PJ9_5](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/c7d2881f-0955-492e-bb11-624060e51610)
   
+  ![9_1](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/fb8137c1-6c87-4662-92b3-cad7113fd29d)
+
 
 ## Step 2 – Configure Jenkins to retrieve source codes from GitHub using Webhooks
 
