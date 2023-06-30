@@ -105,13 +105,26 @@ NB - This part of creating a user can be skipped
     
 Follow the steps from  1 - 7   
 
-![PJ9_6](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/e6d86242-11c7-4b2d-a2a7-044e79ad0662)
-    
-#### 2. - Go to Jenkins web console, click "New Item" and create a "Freestyle project"     
+![9_2](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/5f83c1ba-5063-413b-993f-07a4101ee7e8)
 
-![PJ9_8](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/aee48333-21da-4710-b7c3-eeaf22c1ecbf)
+Below was the output diplayed on my github after i clicked on Step 7 - Add Webhook
+
+![9_3](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/b48da83c-84a4-4325-b81a-07a116232a5a)
+
+
+#### 2. - Go to Jenkins web console, click "New Item" and create a "Freestyle project"
+
+![9_4](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/b79e5372-7450-4bee-ba61-b115d0299ecf)
+
+
+
+
+
+
+
+
     
-i had to connect to GitHub repository, and copied the URL of the Tooling repo
+i had to connect to GitHub repository, and copied the URL of my Project 7 repo
 
 ![PJ9_7](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/0749e081-85be-419a-a3c4-602809d7b502)
     
