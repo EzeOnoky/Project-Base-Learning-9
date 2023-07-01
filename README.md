@@ -24,7 +24,7 @@ Jenkins is one of the tools DevOps Engineers use for continuous integration, con
 
 - Read about [Continuous Integration](https://circleci.com/continuous-integration/), [Continuous Delivery](https://circleci.com/continuous-integration/) and [Continuous Deployment](https://circleci.com/continuous-integration/).
 
-## Setup and technologies used in Project 9
+# Setup and technologies used in Project 9
 
 - Here is how your updated architecture will look like upon competion of this project:
 
@@ -34,9 +34,9 @@ Jenkins is one of the tools DevOps Engineers use for continuous integration, con
 
 ## Step 1 – Install Jenkins server
 
-#### 1. - Create an AWS EC2 server based on Ubuntu Server 20.04 LTS and name it "Jenkins"
+### 1. - Create an AWS EC2 server based on Ubuntu Server 20.04 LTS and name it "Jenkins"
 
-#### 2. - Install [JDK](https://en.wikipedia.org/wiki/Java_Development_Kit) (since Jenkins is a Java-based application)
+### 2. - Install [JDK](https://en.wikipedia.org/wiki/Java_Development_Kit) (since Jenkins is a Java-based application)
 Without JAVA installation, the JENKINS will not run.
 
 ```
@@ -45,7 +45,7 @@ sudo apt install default-jdk-headless -y
 ```
 I had to use Jenkins Installation Script for Ubuntu 20.04...i had to install install same Ubuntu 20.04 on my EC2 Instance.
 
-#### 3. - Install Jenkins
+### 3. - Install Jenkins
 
 ```
 curl -fsSL https://pkg.jenkins.io/debian/jenkins.io-2023.key | sudo tee \
@@ -59,13 +59,13 @@ sudo apt-get install jenkins -y
 
 - Make sure Jenkins is up and running   `sudo systemctl status jenkins`
 
-#### 4. - Open TCP port 8080 on the JENKINS server
+### 4. - Open TCP port 8080 on the JENKINS server
 - By default Jenkins server uses TCP port 8080 – open it by creating a new Inbound Rule in your EC2 Security Group.
 
 ![PJ9_2](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/f710b73f-ba2e-4cb2-986e-09a0f6ef9644)
 
 
-#### 5. - Perform initial Jenkins setup.
+### 5. - Perform initial Jenkins setup.
 
 - From my browser, i accessed **http://<Jenkins-Server-Public-IP-Address-or-Public-DNS-Name>:8080**
 
@@ -100,7 +100,7 @@ NB - This part of creating a user can be skipped
 
 - In this part, you will learn how to configure a simple Jenkins job/project (these two terms can be used interchangeably). This job will will be triggered by GitHub [webhooks](https://en.wikipedia.org/wiki/Webhook) and will execute a ‘build’ task to retrieve codes from GitHub and store it locally on Jenkins server.
 
-#### 1. - Enable webhooks in your GitHub repository settings [Webhooks]
+### 1. - Enable webhooks in your GitHub repository settings [Webhooks]
     (https://darey.io/wp-content/uploads/2021/07/webhook_github.gif)
     
 Follow the steps from  1 - 7   
@@ -112,7 +112,7 @@ Below was the output diplayed on my github after i clicked on Step 7 - Add Webho
 ![9_3](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/b48da83c-84a4-4325-b81a-07a116232a5a)
 
 
-#### 2. - Go to Jenkins web console, click "New Item" and create a "Freestyle project"
+### 2. - Go to Jenkins web console, click "New Item" and create a "Freestyle project"
 
 i had to connect to GitHub repository, and copied the URL of my Project 7 repo
 
@@ -127,17 +127,21 @@ In configuration of my Jenkins freestyle project, I choose Git repository, I als
 
 
 The configurations were saved, then i proceeded to run the build. For now the build can only be done manually.
-Click "Build Now" button, if you have configured everything correctly, the build will be successfull and you will see it under #1 below...
+Click "Build Now" button, if you have configured everything correctly, the build will be successfull and you will see it below...
+  
+I also proceeded to open the build and check in "Console Output" if it has run successfully. Big Congratulations! I was able to make my very first Jenkins build! Note my 1st Build was not failed, check Below to see the correction applied...
 
-![PJ9_10](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/0224b2d4-db09-4e06-a44c-e2efbce50f4b)
-    
-So i proceeded to open the build and check in "Console Output" if it has run successfully. Congratulations! I was able to make my very first Jenkins build!
+![9_8](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/0f59b029-858c-4e5c-a078-8a72adcd9614)
 
-![PJ9_11](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/5eb9273d-a3ba-4682-9bcf-9776d8c6a03e)
+
+![9_10](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/5103cb46-ec74-4f21-bef1-c5b0dee946a5)
+
+Above is the solution applied to solve the failure noticed on Build #1
+
    
 But this build does not produce anything and it runs only when we trigger it manually. Let us fix it.    
 
-#### 3. - I Clicked "Configure" your job/project and proceeded to add these two configurations below
+### 3. - I Clicked "Configure" your job/project and proceeded to add these two configurations below
  
 1 - Configure triggering the job from GitHub webhook:    
 2 - Configure "Post-build Actions" to archive all the files – files resulted from a build are called "artifacts".
