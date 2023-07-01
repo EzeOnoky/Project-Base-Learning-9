@@ -192,7 +192,7 @@ So for our project 9, we will have.... So the view the Artifacts stored in JENKI
     
 - On "Available" tab search for "Publish Over SSH" plugin and install it.
     
-![PJ9_16](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/70317f9d-d6b5-422c-9544-b1b70623bc23)
+![9_14](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/a47f31bb-687d-4ef1-a456-c58f25aa92c9)
     
 2. - Configure the job/project to copy artifacts over to NFS server.
     
