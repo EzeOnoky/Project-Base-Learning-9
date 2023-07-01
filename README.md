@@ -54,7 +54,7 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   https://pkg.jenkins.io/debian binary/ | sudo tee \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
 sudo apt-get update
-sudo apt-get install jenkins
+sudo apt-get install jenkins -y
 ```
 
 - Make sure Jenkins is up and running   `sudo systemctl status jenkins`
@@ -86,7 +86,7 @@ http://44.201.108.157:8080
     
 - Once plugins installation is done – create an admin user and you will get your Jenkins server address. The plugin installation is helps extend the functionality of the JENKINS
 
-![PJ9_4A](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/af26eabc-6512-49e8-89c6-9fba1705e2ef)
+![9_5](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/d3a04815-0566-45d7-b147-bff994106601)
 
 NB - This part of creating a user can be skipped   
 
@@ -114,17 +114,11 @@ Below was the output diplayed on my github after i clicked on Step 7 - Add Webho
 
 #### 2. - Go to Jenkins web console, click "New Item" and create a "Freestyle project"
 
-![9_4](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/b79e5372-7450-4bee-ba61-b115d0299ecf)
-
-
-
-
-
-
-
-
-    
 i had to connect to GitHub repository, and copied the URL of my Project 7 repo
+
+![9_4](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/b79e5372-7450-4bee-ba61-b115d0299ecf)
+    
+While updating the source Code Management on Jenkins, incase you get 403 error, use below to resolve it.
 
 ![PJ9_7](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/0749e081-85be-419a-a3c4-602809d7b502)
     
