@@ -112,7 +112,9 @@ Below was the output diplayed on my github after i clicked on Step 7 - Add Webho
 ![9_3](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/b48da83c-84a4-4325-b81a-07a116232a5a)
 
 
-### 2. - Go to Jenkins web console, click "New Item" and create a "Freestyle project"
+### 2. - Creating Job and Configuring GIT Based Push Trigger
+
+Go to Jenkins web console, click "New Item" and create a "Freestyle project"
 
 i had to connect to GitHub repository, and copied the URL of my Project 7 repo
 
@@ -121,7 +123,7 @@ i had to connect to GitHub repository, and copied the URL of my Project 7 repo
 ![9_6](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/b6a98010-c355-479b-b035-34fe30dcb8d7)
 
     
-In configuration of my Jenkins freestyle project, I choose Git repository, I also provided there the link to the Project 7 GitHub repository and credentials (user/password) so Jenkins could access files in the repository.
+In configuration of my Jenkins freestyle project, I choose Git repository, I also provided there the link to the Project 7 GitHub repository and credentials (user/password) so Jenkins could access files in the repository. `Also specify the branch containing code`....this involves changing from master to main on the branch name
     
 ![9_7](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/90778d41-355d-4b8f-b1ef-7204fce7abd3)
 
@@ -134,31 +136,33 @@ I also proceeded to open the build and check in "Console Output" if it has run s
 ![9_8](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/0f59b029-858c-4e5c-a078-8a72adcd9614)
 
 
+Below is the solution applied to solve the failure noticed on Build #1
+
+
 ![9_10](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/5103cb46-ec74-4f21-bef1-c5b0dee946a5)
 
-Above is the solution applied to solve the failure noticed on Build #1
-
    
-But this build does not produce anything and it runs only when we trigger it manually. Let us fix it.    
+But this build does not produce anything and it runs only when we trigger it manually. Let us fix it by configuring the bulid trigger.    
 
-### 3. - I Clicked "Configure" your job/project and proceeded to add these two configurations below
+### 3. - Configuring Build Triggers
  
 1 - Configure triggering the job from GitHub webhook:    
 2 - Configure "Post-build Actions" to archive all the files – files resulted from a build are called "artifacts".
 
-    
-![PJ9_12](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/ec0934f9-63eb-4191-80d9-51e80d69dfea)
+![9_11](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/f87e84eb-d5ca-457b-af14-6903865da3ab)
+
     
 Now, I proceeded to make some change in any file in the GitHub repository (e.g. README.MD file) and push the changes to the master branch. I saw that a new build has been launched automatically (by webhook) and was also able to see its results – artifacts, saved on Jenkins server.  
 
-I just added one line on my git repo, and then proceeded to commit the change
+I just added one line on my PROJECT 7 git repo, and then proceeded to commit the change
 ![PJ9_13](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/70426175-293a-4188-badc-f1068eb67f4f)
     
 Now on checking JENKINS,  a 3rd build has been triggered by the push event, i proceeded to check more details on the 3rd build
 
-![PJ9_14](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/39b071bc-b582-4b5b-bddf-8abd55c75394)
-    
-You have now configured an automated Jenkins job that receives files from GitHub by webhook trigger (this method is considered as ‘push’ because the changes are being ‘pushed’ and files transfer is initiated by GitHub). There are also other methods: trigger one job (downstreadm) from another (upstream), poll GitHub periodically and others.
+![9_12](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/2049feb9-964f-431e-96f3-0b8aa49ecd99)
+
+   
+SO I have now configured an automated Jenkins job that receives files from GitHub by webhook trigger (this method is considered as ‘push’ because the changes are being ‘pushed’ and files transfer is initiated by GitHub). There are also other methods: trigger one job (downstreadm) from another (upstream), poll GitHub periodically and others.
 
 By default, the artifacts are stored on Jenkins server locally
 
@@ -166,14 +170,14 @@ By default, the artifacts are stored on Jenkins server locally
 
 NB - tooling_github is the name of the freestyle project, build number is number of the build we want to access 
 
-So for our project 9, we will have....
+So for our project 9, we will have.... So the view the Artifacts stored in JENKINS, follow below path...
 
-`ls /var/lib/jenkins/jobs/project9/builds/3/archive/`
-    
-So the view the Artifacts stored in JENKINS, follow below path...    
-    
-![PJ9_15](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/2c331089-8854-495f-8c11-526ae739b6d1)
-    
+`ls /var/lib/jenkins/jobs/Project_9/builds/3/archive/`
+
+
+![9_13](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/65a52f03-3566-4231-be57-d8579b4cf133)
+
+ 
 # CONFIGURE JENKINS TO COPY FILES TO NFS SERVER VIA SSH
     
 ## Step 3 – Configure Jenkins to copy files to NFS server via SSH
