@@ -118,14 +118,14 @@ i had to connect to GitHub repository, and copied the URL of my Project 7 repo
 
 ![9_4](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/b79e5372-7450-4bee-ba61-b115d0299ecf)
     
-While updating the source Code Management on Jenkins, incase you get 403 error, use below to resolve it.
+![9_6](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/b6a98010-c355-479b-b035-34fe30dcb8d7)
 
-![PJ9_7](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/0749e081-85be-419a-a3c4-602809d7b502)
     
-In configuration of my Jenkins freestyle project, I choose Git repository, I also provided there the link to the Tooling GitHub repository and credentials (user/password) so Jenkins could access files in the repository.
+In configuration of my Jenkins freestyle project, I choose Git repository, I also provided there the link to the Project 7 GitHub repository and credentials (user/password) so Jenkins could access files in the repository.
     
-![PJ9_9](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/89449f1b-2a85-4362-992b-1b8e29b7c814)
-    
+![9_7](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/90778d41-355d-4b8f-b1ef-7204fce7abd3)
+
+
 The configurations were saved, then i proceeded to run the build. For now the build can only be done manually.
 Click "Build Now" button, if you have configured everything correctly, the build will be successfull and you will see it under #1 below...
 
@@ -232,6 +232,11 @@ Finished: SUCCESS
 ```    
     
 - To make sure that the files in **/mnt/apps** have been udated – connect via SSH/Putty to your NFS server and check **README.MD** file `cat /mnt/apps/README.md`
+
+# EXTRAS
+While updating the source Code Management on Jenkins, incase you get 403 error, use below to resolve it.
+
+![PJ9_7](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/0749e081-85be-419a-a3c4-602809d7b502)
 
 - If you see the changes you had previously made in your GitHub – the job works as expected.       
   
