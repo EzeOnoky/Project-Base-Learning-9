@@ -25,7 +25,7 @@ Jenkins is one of the tools DevOps Engineers use for continuous integration, con
 - Read about [Continuous Integration](https://circleci.com/continuous-integration/), [Continuous Delivery](https://circleci.com/continuous-integration/) and [Continuous Deployment](https://circleci.com/continuous-integration/).
 
 
-![9_0](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/b31d3ed6-86b7-49a0-82c2-3f42b7f159d5)
+![9_0](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/bccb8c66-1d35-4f87-994a-8fb2c21881b9)
 
 
 # Setup and technologies used in Project 9
