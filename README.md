@@ -46,7 +46,7 @@ Without JAVA installation, the JENKINS will not run.
 sudo apt update
 sudo apt install default-jdk-headless -y
 ```
-I had to use Jenkins Installation Script for Ubuntu 20.04...i had to install install same Ubuntu 20.04 on my EC2 Instance.
+I had to use Jenkins Installation Script for Ubuntu 20.04...i had to install same Ubuntu 20.04 on my EC2 Instance.
 
 ### 3. - Install Jenkins
 
@@ -58,9 +58,10 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
 sudo apt-get update
 sudo apt-get install jenkins -y
+sudo systemctl status jenkins
 ```
 
-- Make sure Jenkins is up and running   `sudo systemctl status jenkins`
+I confirmed that Jenkins is up and running...
 
 ### 4. - Open TCP port 8080 on the JENKINS server
 - By default Jenkins server uses TCP port 8080 – open it by creating a new Inbound Rule in your EC2 Security Group.
