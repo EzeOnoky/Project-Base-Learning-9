@@ -135,7 +135,7 @@ In configuration of my Jenkins freestyle project, I choose Git repository, I als
 The configurations were saved, then i proceeded to run the build. For now the build can only be done manually.
 Click "Build Now" button, if you have configured everything correctly, the build will be successfull and you will see it below...
   
-I also proceeded to open the build and check in "Console Output" if it has run successfully. Big Congratulations! I was able to make my very first Jenkins build! Note my 1st Build was not failed, check Below to see the correction applied...
+I also proceeded to open the build and check in "Console Output" if it has run successfully. Big Congratulations! I was able to make my very first Jenkins build! Note my 1st Build failed, check Below to see the correction applied...
 
 ![9_8](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/0f59b029-858c-4e5c-a078-8a72adcd9614)
 
@@ -166,7 +166,8 @@ Now on checking JENKINS,  a 3rd build has been triggered by the push event, i pr
 ![9_12](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/2049feb9-964f-431e-96f3-0b8aa49ecd99)
 
    
-SO I have now configured an automated Jenkins job that receives files from GitHub by webhook trigger (this method is considered as ‘push’ because the changes are being ‘pushed’ and files transfer is initiated by GitHub). There are also other methods: trigger one job (downstreadm) from another (upstream), poll GitHub periodically and others.
+### SO I have now configured an automated Jenkins job that receives files from GitHub by webhook trigger
+- this method is considered as ‘push’ because the changes are being ‘pushed’ and files transfer is initiated by GitHub. There are also other methods: trigger one job (downstreadm) from another (upstream), poll GitHub periodically and others.
 
 By default, the artifacts are stored on Jenkins server locally
 
@@ -190,7 +191,7 @@ So for our project 9, we will have.... So the view the Artifacts stored in JENKI
     
 - Jenkins is a highly extendable application and there are 1400+ plugins available. We will need a plugin that is called "[Publish Over SSH](https://plugins.jenkins.io/publish-over-ssh/)".
     
-1. - Install "Publish Over SSH" plugin.
+### 1. - Install "Publish Over SSH" plugin.
     
 - On main dashboard select "Manage Jenkins" and choose "Manage Plugins" menu item.
     
@@ -198,7 +199,7 @@ So for our project 9, we will have.... So the view the Artifacts stored in JENKI
     
 ![9_14](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/a47f31bb-687d-4ef1-a456-c58f25aa92c9)
     
-2. - Configure the job/project to copy artifacts over to NFS server.
+### 2. - Configure the job/project to copy artifacts over to NFS server.
     
 - On main dashboard select "Manage Jenkins" and choose "Configure System" menu item.
     
