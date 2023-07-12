@@ -251,17 +251,19 @@ Below circled red was the extra update i made to my readme.md file of my Project
 
 ![9_18](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/7c614462-126e-4888-a50c-c55922ebbd95)
 
+
 # Congratulations EZE !
 You have just implemented your first Continuous Integration solution using Jenkins CI. Looking out for advanced CI configurations in upcoming projects.
 
-# EXTRAS - Problems Face and the Solution
 
-# 1 While updating the source Code Management on Jenkins, incase you get 403 error, use below to resolve it.
+## EXTRAS - Problems Face and the Solution
+
+### 1 While updating the source Code Management on Jenkins, incase you get 403 error, use below to resolve it.
 
 ![PJ9_7](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/0749e081-85be-419a-a3c4-602809d7b502)
 
 - If you see the changes you had previously made in your GitHub – the job works as expected.
 
-# 2 Failed JENKIN Build Attempt - How did i fix it
+### 2 Failed JENKIN Build Attempt - How did i fix it
     
 ![9_19](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/b89d6e7d-fe84-4dbc-8587-4f4725954934)
