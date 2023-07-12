@@ -216,42 +216,52 @@ So for our project 9, we will have.... So the view the Artifacts stored in JENKI
 5. - Remote directory – **/mnt/apps** since our Web Servers use it as a mointing point to retrieve files from the NFS server
     
 - Test the configuration and make sure the connection returns **Success**. Remember, that TCP port 22 on NFS server must be open to receive SSH connections.    
-    
-    
-![PJ9_17](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/ff79f55c-43fd-44bd-82ec-cdd82d5c5d0c)
 
-    
+![9_15](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/15721a84-4f4d-4f40-8473-8ca7754d04ff)
+ 
 - Save the configuration, open your Jenkins job/project configuration page and add another one "Post-build Action"
 
 - Configure it to send all files probuced by the build into our previouslys define remote directory. In our case we want to copy all files and directories – so we use **.
     
-- If you want to apply some particular pattern to define which files to send – use this syntax.    
+- If you want to apply some particular pattern to define which files to send – use this syntax.
+
+![9_16](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/0bc48560-61d6-4f6a-8f0b-d8522691e39d)
+
 
 ![PJ9_18](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/b14f62e2-ed73-439e-b499-0c80a3f08b54)
     
-- Configure it to send all files probuced by the build into our previouslys define remote directory. In our case we want to copy all files and directories – so we use **.
+- Configure it to send all files probuced by the build into our previouslys define remote directory /mnt/apps. In our case we want to copy all files and directories – so we use **.
     
-- If you want to apply some particular pattern to define which files to send – use this syntax.
+- Save this configuration and go ahead, change something in **README.MD** file in your GitHub Project 7 repository.
     
-<img width="551" alt="Send build artifact over ssh" src="https://user-images.githubusercontent.com/115954100/226905946-7a7254a5-8c1a-43a2-9493-0e88a67fe37a.png">
-   
-- Save this configuration and go ahead, change something in **README.MD** file in your GitHub Tooling repository.
-    
-- Webhook will trigger a new job and in the "Console Output" of the job you will find something like this:    
+- Webhook  triggered a new job and in the "Console Output" of my JENKIN job, below was seen    
     
 ```    
 SSH: Transferred 25 file(s)
 Finished: SUCCESS   
-```    
-    
-- To make sure that the files in **/mnt/apps** have been udated – connect via SSH/Putty to your NFS server and check **README.MD** file `cat /mnt/apps/README.md`
+```
+![9_17](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/63dba103-bc7f-4a7e-9212-e8a61b98a073)
 
-# EXTRAS
-While updating the source Code Management on Jenkins, incase you get 403 error, use below to resolve it.
+    
+- To make sure that the files in **/mnt/apps** have been udated – connect via SSH/Putty to your NFS server and check **README.MD** file
+
+`cat /mnt/apps/README.md`
+
+Below circled red was the extra update i made to my readme.md file of my Project 7 Github Repository
+
+![9_18](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/7c614462-126e-4888-a50c-c55922ebbd95)
+
+# Congratulations EZE !
+You have just implemented your first Continuous Integration solution using Jenkins CI. Looking out for advanced CI configurations in upcoming projects.
+
+# EXTRAS - Problems Face and the Solution
+
+# 1 While updating the source Code Management on Jenkins, incase you get 403 error, use below to resolve it.
 
 ![PJ9_7](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/0749e081-85be-419a-a3c4-602809d7b502)
 
-- If you see the changes you had previously made in your GitHub – the job works as expected.       
-  
+- If you see the changes you had previously made in your GitHub – the job works as expected.
+
+# 2 Failed JENKIN Build Attempt - How did i fix it
     
-    
+![9_19](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/b89d6e7d-fe84-4dbc-8587-4f4725954934)
