@@ -267,3 +267,7 @@ You have just implemented your first Continuous Integration solution using Jenki
 ### 2 Failed JENKIN Build Attempt - How did i fix it
     
 ![9_19](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/b89d6e7d-fe84-4dbc-8587-4f4725954934)
+
+### 3 How to Identify RSA Private key
+
+![9_20](https://github.com/EzeOnoky/Project-Base-Learning-9/assets/122687798/51a3be25-23d4-4fc1-8249-34b6156340b0)
