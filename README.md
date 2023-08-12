@@ -50,6 +50,8 @@ I had to use Jenkins Installation Script for Ubuntu 20.04...i had to install sam
 
 ### 3. - Install Jenkins
 
+Copy ALL below and execute at once, do not copy in batches....
+
 ```
 curl -fsSL https://pkg.jenkins.io/debian/jenkins.io-2023.key | sudo tee \
   /usr/share/keyrings/jenkins-keyring.asc > /dev/null
